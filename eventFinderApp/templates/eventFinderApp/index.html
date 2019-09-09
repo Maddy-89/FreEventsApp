@@ -2,7 +2,10 @@
 
 {% block content %}
 
-    <button id="new-event">+ Create new event</button>
+    <button id="new-event">+ Create new event
+        <a href="{% url 'eventFinderApp:NewEventForm' %}">
+    </button>
+    
     <h3>See what's on!</h3>
     {% if events_list %}
         {% for event in events_list %}
