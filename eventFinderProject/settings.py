@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
 ]
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,7 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'eventFinderProject.wsgi.application'
-
+LOGIN_REDIRECT_URL = '/event-finder'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
