@@ -1,7 +1,5 @@
 from django.urls import path
-
 from . import views
-
 
 app_name = 'eventFinderApp'
 
@@ -14,4 +12,6 @@ urlpatterns = [
     path('my-account/', views.account, name='account'),
     # event-finder/add-event
     path('add-event/', views.add_event, name='add_event'),
+    #API
+    
 ]

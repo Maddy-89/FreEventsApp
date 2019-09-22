@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework import routers
+from eventFinderApp import viewsets
+
+router = routers.DefaultRouter()
+router.register(r'events', viewsets.EventViewSet)
 
 urlpatterns = [
     path('event-finder/', include('eventFinderApp.urls')),
     path('admin/', admin.site.urls),
     path('users/', include('django.contrib.auth.urls')),
     path('users/', include('users.urls')),
+    path('api/', include(router.urls))
 ]
