@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'crispy_forms',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -71,7 +72,11 @@ TEMPLATES = [
         },
     },
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 WSGI_APPLICATION = 'eventFinderProject.wsgi.application'
 
 
@@ -130,3 +135,9 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 LOGIN_REDIRECT_URL = 'eventFinderApp:index'
 LOGOUT_REDIRECT_URL = 'eventFinderApp:index'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
