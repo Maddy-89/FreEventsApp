@@ -3,15 +3,14 @@
 {% block content %}
 
 <h2>{{ event.title }}</h2>
-
 <p>{{ event.location }}</p>
 <p>Starts at: {{ event.start_time }}</p>
 <p>Ends at: {{ event.end_time }}</p>
 <p>Category:
-{% for category in event.category.all %}
-          {{ category.name }}
-        {% endfor %}</p>
+  {% for cat in event.categories.all %}
+  <p>{{ cat.name }}</p>
+        {% endfor %}
 
-        <h3>Hosted by:</h3>
+        <h3>Hosted by:{{event.host.username}}</h3>
 
 {% endblock %}
