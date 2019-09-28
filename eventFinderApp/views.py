@@ -35,11 +35,14 @@ def add_event(request):
         form = EventForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
+            event = form.save(commit=False)
+            event.host = request.user
+            event.save()
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
             # return HttpResponseRedirect('/thanks/')
-            form.save()
+            
             return HttpResponseRedirect(reverse('eventFinderApp:index'))
         return render(request, 'eventFinderApp/newEventForm.html', {'eventform': form})
     # if a GET (or any other method) we'll create a blank form
