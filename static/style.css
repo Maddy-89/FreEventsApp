@@ -1,16 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
 html {
     font-family: 'Manjari', sans-serif;
 }
 
 body {
     margin: 50px;
+    background: #000;
+    font-size: 16px;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #2e8bc0;
+
+.neon {
+    font-family: 'Londrina Outline', cursive;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 8em;
+    color: #fff;
+    letter-spacing: 0.15em;
     margin: 0;
 }
+.green {
+    text-shadow: 
+        0 0 5px #7bffce,
+        0 0 10px #7bffce,
+        0 0 20px #7bffce,
+        0 0 40px #7bffce,
+        0 0 80px #7bffce,
+        0 0 90px #7bffce,
+        0 0 100px #7bffce,
+        0 0 150px #7bffce;
+}
+
 
 h2 {
     margin: 0;
@@ -20,7 +40,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #000;
     margin-bottom: 20px;
 }
 
@@ -29,38 +48,68 @@ nav a {
 }
 
 a {
-    color: #2e8bc0;
+    color: #fff;
 }
 
 #new-event {
     width: 100%;
-    background-color: #2e8bc0;
+    background-color: #000;
     color: #fff;
-    border: 1px solid #2e8bc0;
+    border: 1px solid #7bacff;
     border-radius: 5px;
     font-size: 1.5rem;
     height: 50px;
     cursor: pointer;
 }
 
-#new-event:hover {
+#new-event:hover, .details-box a:hover {
     text-decoration: underline;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    text-shadow: 
+        0 0 5px #7bacff,
+        0 0 10px #7bacff,
+        0 0 20px #7bacff,
+        0 0 40px #7bacff,
+        0 0 80px #7bacff,
+        0 0 90px #7bacff,
+        0 0 100px #7bacff,
+        0 0 150px #7bacff;
 }
 
 .details-box {
-    border: 1px solid #2e8bc0;
+    border: 1px solid #7bacff;
     border-radius: 5px;
     margin: 10px 0;
     padding: 10px;
 }
 
 .details-box a {
-    color: #000 !important;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
 }
 
-.details-box a:hover {
-    text-decoration: underline;
+.btn {
+background-color: #000;
+    color: #fff;
+    border: 1px solid #ff7bac;
 }
+
+.btn:hover {
+    text-shadow: 
+        0 0 5px #ff7bac,
+        0 0 10px #ff7bac,
+        0 0 20px #ff7bac,
+        0 0 40px #ff7bac,
+        0 0 80px #ff7bac,
+        0 0 90px #ff7bac,
+        0 0 100px #ff7bac,
+        0 0 150px #ff7bac;
+        text-decoration: underline;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+}
+
