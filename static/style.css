@@ -62,7 +62,7 @@ a {
     cursor: pointer;
 }
 
-#new-event:hover, .details-box a:hover {
+#new-event:hover, a:hover{
     text-decoration: underline;
     text-align: center;
     color: #fff;
@@ -78,14 +78,18 @@ a {
         0 0 150px #7bacff;
 }
 
-.details-box {
+.card, .list-group-item{
     border: 1px solid #7bacff;
     border-radius: 5px;
     margin: 10px 0;
     padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
 }
 
-.details-box a {
+.card {
     text-decoration: none;
     display: flex;
     justify-content: space-between;
