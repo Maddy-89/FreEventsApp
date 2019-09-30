@@ -1,9 +1,18 @@
-<div class="details-box">
-    <a href="{% url 'eventFinderApp:event' event.id %}">
-        <p>{{ event.title }}</p>
-        <p>{{ event.start_time }}</p>
-        {% for category in event.category.all %}
-          <p>{{ category.name }}</p>
-        {% endfor %}
-    </a>
+<section class = "container">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ event.title }}</h5>
+              
+              <ul class="list-group list-group-flush">
+                  {% for cat in event.categories.all %}
+                  <li class="list-group-item">{{ cat.name }}</li>
+                  {% endfor %}
+              </ul>
+        <p class="card-text">{{ event.start_time }}</p>
+        <div class="card-body">
+        <a href="{% url 'eventFinderApp:event' event.id %}" class="btn">Go somewhere</a>
+  </div>
+      </div>
 </div>
+</section>
