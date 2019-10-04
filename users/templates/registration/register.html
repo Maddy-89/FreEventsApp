@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<section class="row">
+<section class="row d-flex justify-content-around">
 <form class="col-sm-12 col-md-5 col-lg-5" method="post" novalidate>
     {% csrf_token %}
     {{ form | crispy }}
