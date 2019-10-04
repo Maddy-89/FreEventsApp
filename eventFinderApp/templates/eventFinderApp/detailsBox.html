@@ -1,19 +1,20 @@
-<section class = "container">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ event.title }}</h5>
-              
-              <ul class="list-group list-group-flush">
-                  {% for cat in event.categories.all %}
-                  <li class="list-group-item">{{ cat.name }}</li>
-                  {% endfor %}
-              </ul>
+<section class = "container col-sm-12 col-md-5 col-lg-4">>
+  <div class="card">
+    <img class="card-img-top img-thumbnail" src="https://images.app.goo.gl/ELNy9hRdJgzSSY4e7" alt="event image">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.title }}</h5>
         <p class="card-text">{{ event.start_time }}</p>
-        <div class="card-body">
-        <a href="{% url 'eventFinderApp:event' event.id %}" class="btn">+ sign up for this event</a>
-        <a href="{% url 'eventFinderApp:event' event.id %}" class="btn">+ more details</a>
-  </div>
+                  
+                  <ul class="list-group list-group-flush">
+                      {% for cat in event.categories.all %}
+                      <li class="list-group-item">{{ cat.name }}</li>
+                      {% endfor %}
+                  </ul>
+            
+            <div class="card-body">
+            <a href="{% url 'eventFinderApp:event' event.id %}" class="btn">+ sign up for this event</a>
+            <a href="{% url 'eventFinderApp:event' event.id %}" class="btn">+ more details</a>
       </div>
-</div>
+          </div>
+  </div>
 </section>
