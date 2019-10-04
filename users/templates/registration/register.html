@@ -4,10 +4,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
-<form method="post" novalidate>
+<section class="row">
+<form class="col-sm-12 col-md-5 col-lg-5" method="post" novalidate>
     {% csrf_token %}
     {{ form | crispy }}
     <button type="submit" value="Update" class="btn">Register</button>
   </form>
+</section>
 {% endblock %}

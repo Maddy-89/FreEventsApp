@@ -5,6 +5,7 @@
     <a href="{% url 'eventFinderApp:add_event' %}"><button id="new-event">+ Event</button></a>
 
     <h3>See what's on!</h3>
+    <div class="row">
     {% if events_list %}
         {% for event in events_list %}
             {% include "./detailsBox.html" with event=event %}
@@ -12,5 +13,5 @@
     {% else %}
         <p>No events are available.</p>
     {% endif %}
-
+</div>
 {% endblock %}
